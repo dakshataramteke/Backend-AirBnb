@@ -2,17 +2,31 @@
 
 <body>
     <h3>Show Route</h3>
-    <ul>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+             <h3>Listings Details</h3>
+        </div>
+        <div class="card col-6 offset-2 ">
+<img src="<%= listing.image %>" alt="" class="show_img">
+        </div>
+        <div class="card-body offset-2 mt-2">
+            <p class="card-text">
+                <b><%= listing.title %> </b>
+            </p>
+            <p><%= listing.description %></p>
+        <p>&#8377; <%= listing.price %></p>
+        <p><%= listing.location %></p>
+        <p><%= listing.country %></p>
+        </div>
         
-        <li><%= listing.title %> </li>
-        <li><%= listing.description %></li>
-        <li>&#8377; <%= listing.price.toLocaleString("en-IN") %></li>
-        <li><%= listing.location %></li>
-        <li><%= listing.country %></li>
+    
      
-    </ul>
-    <a href="/listings/<%=listing._id%>/edit">Edit</a>
-    <form action="/listings/<%=listing._id%>?_method=DELETE" method="post" >
-        <button>Delete</button>
-    </form>
+    </div>
+    <div class="btns offset-2 mb-3">
+        <a href="/listings/<%=listing._id%>/edit" class="btn btn-dark edit_btn me-3">Edit</a>
+        <form action="/listings/<%=listing._id%>?_method=DELETE" method="post" >
+            <button class="btn btn-dark ">Delete</button>
+        </form>
+    </div>
+   
 </body>

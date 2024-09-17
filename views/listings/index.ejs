@@ -10,11 +10,11 @@
         
     <div class="card col-4 m-3" style="width: 20rem; ">
         <a href="/listings/<%= listing._id%>" class="listing-link">
-        <img src="<%= listing.image %>" class="card-img-top" alt="..." style=" height: 16rem;">
+        <img src="<%= listing.image %>" class="card-img-top" alt="Image" style=" height: 16rem;">
         <div class="card-img-overlay">Hotel</div>
         <div class="card-body">
             <h4><%= listing.title %></h4>
-          <p><i class="fa-solid fa-indian-rupee-sign"></i> <%= listing.price.toLocaleString("en-IN") %> / Night</p>
+          <p><i class="fa-solid fa-indian-rupee-sign"></i> <%= listing.price ? listing.price.toLocaleString('IN-EN') : "NA" %> / Night</p>
         </div>
     </a>
       </div>

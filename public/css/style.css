@@ -75,3 +75,10 @@ font-size: 2rem;
     background-color: red !important;
     border: none;
 }
+.btns{
+    display: flex;
+}
+.show_img{
+    height: 320px;
+    border-radius: .75rem;
+}

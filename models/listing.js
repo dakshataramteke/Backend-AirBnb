@@ -3,14 +3,14 @@ const Schema = mongoose.Schema;
 const listingSchema = new Schema({
     title:{
      type: String,
-     required: true,
+    //  required: true,
     },
     description :String,
     image : {
-        default :"https://www.pexels.com/photo/lake-and-mountain-under-white-sky-443446/",
+        default :"https://www.pexels.com/photo/lake-and-mountain-under-white-sky-443446",
         
         type: String,
-        set :(v)=> v ==="" ? "https://www.pexels.com/photo/lake-and-mountain-under-white-sky-443446/" :v,
+        set :(v)=> v ==="" ? "https://www.pexels.com/photo/lake-and-mountain-under-white-sky-443446" :v,
     },
     price : Number,
     location : String,
